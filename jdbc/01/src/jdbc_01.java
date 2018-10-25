@@ -1,6 +1,7 @@
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.Statement;
+
 public class jdbc_01 {
     public static void main(String[] args) throws Exception {
         // 1.不推荐的做法
@@ -27,6 +28,7 @@ public class jdbc_01 {
         // 4.执行sql语句，获取结果
         String insert = "insert into jdbc_01_sort(sname,sprice,sdesc) values('工具',7000,'装潢用品') ";
         int i = s.executeUpdate(insert);
-        System.out.println(i);
+        s.close(); // 关闭执行语句平台对象
+        c.close(); // 关闭连接
     }
 }
