@@ -12,7 +12,18 @@ public class JDBC {
         Connection con = DriverManager.getConnection(url, username, password);
         Statement state = con.createStatement();
         String sql = "SELECT * FROM jdbc_01_sort";
+        // 返回的ResultSet的实现类对象，依然是在驱动包里实现的
         ResultSet result = state.executeQuery(sql);
-        System.out.println(result);
+        // 处理结果集
+        while (result.next()) {
+            int vInt = result.getInt("sid");
+            String vString = result.getString("sname");
+            System.out.println(vInt); // 得到每竖列的数据 int类型
+            System.out.println(vString); // 得到每竖列的数据 String类型
+        }
+        result.close();
+        state.close();
+        con.close();
+
     }
 }
