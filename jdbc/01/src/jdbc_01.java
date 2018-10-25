@@ -26,7 +26,7 @@ public class jdbc_01 {
         System.out.println(s);
 
         // 4.执行sql语句，获取结果
-        String insert = "insert into jdbc_01_sort(sname,sprice,sdesc) values('工具',7000,'装潢用品') ";
+        String insert = "insert into jdbc_01(sname,sprice,sdesc) values('工具',7000,'装潢用品') ";
         int i = s.executeUpdate(insert);
         s.close(); // 关闭执行语句平台对象
         c.close(); // 关闭连接

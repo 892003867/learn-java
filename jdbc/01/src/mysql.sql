@@ -1,6 +1,6 @@
 USE jdbc;
 #添加表
-CREATE TABLE jdbc_01_sort(
+CREATE TABLE jdbc_01(
   sid INT PRIMARY KEY AUTO_INCREMENT,
   sname VARCHAR(1000),
   sprice DOUBLE,
@@ -8,7 +8,7 @@ CREATE TABLE jdbc_01_sort(
 );
 
 #添加数据
-INSERT INTO jdbc_01_sort(sname,sprice,sdesc) VALUES ('家电',2000,'优惠促销'),
+INSERT INTO jdbc_01(sname,sprice,sdesc) VALUES ('家电',2000,'优惠促销'),
                                             ('家具',8000,'家具价格上调，原材料涨价'),
                                             ('玩具',300,'赚家长钱'),
                                             ('生鲜',500.99,'生鲜商品'),
