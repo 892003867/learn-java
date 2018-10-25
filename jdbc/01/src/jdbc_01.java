@@ -1,7 +1,6 @@
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.Statement;
-
 public class jdbc_01 {
     public static void main(String[] args) throws Exception {
         // 1.不推荐的做法
