@@ -9,6 +9,5 @@
 #### 03  
 1. 防止sql注入  
 *`prepareStatement()`  
-*通过Connection实现类的方法prepareStatement得到PreparedStatement实现类。使用？占位符，站位sql语句。
-具体查看  
-*案例：prepareStatementDemo.java代码
+*通过Connection实现类的方法prepareStatement得到PreparedStatement实现类。使用？占位符，站位sql语句    
+*案例：03-prepareStatementDemo.java代码
