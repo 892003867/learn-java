@@ -1,9 +1,9 @@
 ####导航  
-_01_JDBC：[简单连接](#user-content-_01_JDBC)  
-_02_JDBC：[结果集处理](#user-content-_02_JDBC)  
-_03_JDBC：[防止sql注入](#user-content-_03_JDBC)  
-_04_JDBC：[数据表数据存储对象](#user-content-_04_jdbc)  
-_05_JDBC：[JDBC简单连接](#user-content-_05_JDBC)  
+1. _01_JDBC：[简单连接](#user-content-_01_JDBC)  
+2. _02_JDBC：[结果集处理](#user-content-_02_JDBC)  
+3. _03_JDBC：[防止sql注入](#user-content-_03_JDBC)  
+4. _04_JDBC：[数据表数据存储对象](#user-content-_04_jdbc)  
+5. _05_JDBC：[JDBC简单连接](#user-content-_05_JDBC)  
 ----
 #### Utils  
 1. JDBCUtils.java  
@@ -18,7 +18,8 @@ _05_JDBC：[JDBC简单连接](#user-content-_05_JDBC)
         }
 ```
 ----
-#### _01_JDBC  [跳转导航](#user-content-导航)
+#### _01_JDBC  
+*[跳转导航](#user-content-导航)
 1. 进行简单步骤连接
 ----
 #### _02_JDBC  
