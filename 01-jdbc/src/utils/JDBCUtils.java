@@ -1,5 +1,7 @@
 package utils;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.sql.*;
 
 public class JDBCUtils {
@@ -7,8 +9,14 @@ public class JDBCUtils {
     }
 
     private static Connection con;
+    private static FileInputStream fis;
 
     static {
+        try {
+            fis = new FileInputStream("database.properties");
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException("properties文件找不到");
+        }
         try {
             Class.forName("com.mysql.jdbc.Driver");
             String url = "jdbc:mysql://192.168.56.1:8888/jdbc?useUnicode=true&characterEncoding=utf8";
@@ -46,6 +54,7 @@ public class JDBCUtils {
             }
         }
     }
+
     public static void close(Connection con, Statement state) {
         if (con != null) {
             try {
