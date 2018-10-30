@@ -19,12 +19,11 @@
 ```
 ----
 #### _01_JDBC  
-*[跳转导航](#user-content-导航)
 1. 进行简单步骤连接
 ----
 #### _02_JDBC  
 1. 使用ResultSet实现类进行结果集处理，此类方法获取竖行一列的数据，传参可传递列名，精确获取    
->ResultSet实现类方法：`next(); getString(); getInt();`
+>ResultSet实现类方法：`next(); getString(); getInt();`[跳转导航](#user-content-导航)
 ----
 #### _03_JDBC  
 1. 防止sql注入  
