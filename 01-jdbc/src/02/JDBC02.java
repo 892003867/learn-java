@@ -3,7 +3,7 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
-public class JDBC {
+public class JDBC02 {
     public static void main(String[] args) throws Exception {
         Class.forName("com.mysql.jdbc.Driver");
         String url = "jdbc:mysql://192.168.56.1:8888/jdbc?useUnicode=true&characterEncoding=utf8";

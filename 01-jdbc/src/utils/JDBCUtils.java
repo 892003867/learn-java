@@ -1,3 +1,5 @@
+package utils;
+
 import java.sql.*;
 
 public class JDBCUtils {
@@ -11,7 +13,7 @@ public class JDBCUtils {
             Class.forName("com.mysql.jdbc.Driver");
             String url = "jdbc:mysql://192.168.56.1:8888/jdbc?useUnicode=true&characterEncoding=utf8";
             String username = "root";
-            String password = "123";
+            String password = "123456";
             con = DriverManager.getConnection(url, username, password);
         } catch (Exception e) {
             throw new RuntimeException("e" + "数据库连接失败");

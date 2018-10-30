@@ -4,7 +4,7 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 
 // sql注入攻击演示
-public class JDBC {
+public class JDBC03 {
     public static void main(String[] args) throws Exception {
         Class.forName("com.mysql.jdbc.Driver");
         String url = "jdbc:mysql://192.168.56.1:8888/jdbc?useUnicode=true&characterEncoding=utf8";
