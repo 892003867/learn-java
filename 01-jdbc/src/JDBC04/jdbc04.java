@@ -1,3 +1,5 @@
+package JDBC04;
+
 import utils.JDBCUtils;
 
 import java.sql.Connection;

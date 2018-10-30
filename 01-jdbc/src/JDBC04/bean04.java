@@ -1,3 +1,4 @@
+package JDBC04;
 public class bean04 {
     private int sid;
     private String sname;
