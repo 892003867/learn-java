@@ -3,6 +3,12 @@
 *properties配置文件，并封装JDBC实现工具,读取properties文件可以通过FileInputStream字节流读取，但读取文件的方式需要采用类的加载器读取
 ```java
  InputStream fis = ClassLoader.getSystemResourceAsStream("utils/database.properties");
+  Properties pro = new Properties();
+        try {
+            pro.load(fis);
+        } catch (IOException e) {
+            throw new RuntimeException("读取properties流错误");
+        }
 ```
 ----
 #### JDBC01

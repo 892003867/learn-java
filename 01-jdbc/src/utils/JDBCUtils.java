@@ -1,9 +1,9 @@
 package utils;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.io.InputStream;
 import java.sql.*;
+import java.util.Properties;
 
 public class JDBCUtils {
     private JDBCUtils() {
@@ -11,14 +11,21 @@ public class JDBCUtils {
 
     private static Connection con;
     private static InputStream fis;
+    private static Properties pro;
 
     static {
         fis = ClassLoader.getSystemResourceAsStream("utils/database.properties");
+        pro = new Properties();
         try {
-            Class.forName("com.mysql.jdbc.Driver");
-            String url = "jdbc:mysql://192.168.56.1:8888/jdbc?useUnicode=true&characterEncoding=utf8";
-            String username = "root";
-            String password = "123456";
+            pro.load(fis);
+        } catch (IOException e) {
+            throw new RuntimeException("读取properties流错误");
+        }
+        try {
+            Class.forName(pro.getProperty("driverClass"));
+            String url = pro.getProperty("url");
+            String username = pro.getProperty("username");
+            String password = pro.getProperty("password");
             con = DriverManager.getConnection(url, username, password);
         } catch (Exception e) {
             throw new RuntimeException("e" + "数据库连接失败");
