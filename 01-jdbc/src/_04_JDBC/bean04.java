@@ -1,4 +1,4 @@
-package JDBC04;
+package _04_JDBC;
 public class bean04 {
     private int sid;
     private String sname;

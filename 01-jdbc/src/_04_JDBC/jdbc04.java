@@ -1,4 +1,4 @@
-package JDBC04;
+package _04_JDBC;
 
 import utils.JDBCUtils;
 
