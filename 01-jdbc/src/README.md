@@ -1,5 +1,6 @@
-#### JDBCUtils  
-1. properties配置文件，并封装JDBC实现工具
+#### Utils  
+1. JDBCUtils.java  
+*properties配置文件，并封装JDBC实现工具
 ----
 #### JDBC01
 1. 进行简单步骤连接  
