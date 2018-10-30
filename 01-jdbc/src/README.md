@@ -1,3 +1,6 @@
+####标题
+#####[JDBC简单连接](#user-content-_05_dbutils)
+----
 #### Utils  
 1. JDBCUtils.java  
 *properties配置文件，并封装JDBC实现工具,读取properties文件可以通过FileInputStream字节流读取，但读取文件的方式需要采用类的加载器读取
@@ -13,7 +16,6 @@
 ----
 #### _01_JDBC
 1. 进行简单步骤连接  
-[What is LaTeX?](#user-content-_05_dbutils)
 ----
 #### _02_JDBC  
 1. 使用ResultSet实现类进行结果集处理，此类方法获取竖行一列的数据，传参可传递列名，精确获取    
