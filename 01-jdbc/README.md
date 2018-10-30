@@ -17,4 +17,4 @@
 1. 数据表数据存储对象  
 *读取数据库的数据，存储到bean类中，并将bean类存储到List集合当中
 #### 05  
-1. properties配置文件
+1. properties配置文件！
