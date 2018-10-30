@@ -1,9 +1,9 @@
 ####导航 
-_01_JDBC：[简单连接](#user-content-_01_dbutils)  
-_02_JDBC：[结果集处理](#user-content-_02_dbutils)  
-_03_JDBC：[防止sql注入](#user-content-_03_dbutils)  
-_04_JDBC：[数据表数据存储对象](#user-content-_04_dbutils)  
-_05_JDBC：[JDBC简单连接](#user-content-_05_dbutils)  
+_01_JDBC：[简单连接](#user-content-01_JDBC)  
+_02_JDBC：[结果集处理](#user-content-02_JDBC)  
+_03_JDBC：[防止sql注入](#user-content-03_JDBC)  
+_04_JDBC：[数据表数据存储对象](#user-content-04_JDBC)  
+_05_JDBC：[JDBC简单连接](#user-content-05_JDBC)  
 ----
 #### Utils  
 1. JDBCUtils.java  
