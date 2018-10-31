@@ -42,4 +42,4 @@
 #### _06_ResultSetHandler  
 1. JavaBean：对数据库表的一种类的表现，要求getter与setter，空参构造器与构造器赋值，bean用于封装数据  
 2. ResultSetHandler接口：结果集处理工具,依据实现类进行对结果处理，通过QueryRunner类的`query()`方法，得到ResultSetHandler接口  
->ResultSetHandler接口实现类：``
+>ResultSetHandler接口常用实现类：`ArrayHandler类、ArrayListHandler类、BeanHandler类、BeanListHandler类、ColumnListHandler类、ScalarHandler类`
