@@ -3,7 +3,7 @@
 2. _02_JDBC：[结果集处理](#user-content-_02_jdbc)  
 3. _03_JDBC：[防止sql注入](#user-content-_03_jdbc)  
 4. _04_JDBC：[数据表数据存储对象](#user-content-_04_jdbc)  
-5. _05_JDBC：[JDBC简单连接](#user-content-_05_DBUtils)  
+5. _05_DBUtils：[JDBC简单连接](#user-content-_05_dbutils)  
 ----
 #### Utils  
 1. JDBCUtils.java  
