@@ -37,4 +37,4 @@
 1. 对JDBC的封装工具类  
 >核心类：`DbUtils类、QueryRunner类、ResultSetHandler类`[跳转导航](#user-content-导航)
 2. QueryRunner类  
-*
+*通过update()方法进行增删改操作
