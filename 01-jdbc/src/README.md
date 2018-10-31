@@ -44,4 +44,6 @@
 2. ResultSetHandler接口：结果集处理工具,依据实现类进行对结果处理，通过QueryRunner类的`query()`方法，得到ResultSetHandler接口  
 >ResultSetHandler接口常用实现类：`ArrayHandler类、ArrayListHandler类、BeanHandler类、BeanListHandler类、ColumnListHandler类、ScalarHandler类、MapHandler类、MapListHandler类`  
 3. ArrayHandler类  
-*只查询数据库第一行的数据
+*只查询数据库第一行的数据  
+4. ArrayListHandler类  
+*每一行的数据封装到List<Object[]>中,通过嵌套循环遍历
