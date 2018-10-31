@@ -36,3 +36,5 @@
 #### _05_DBUtils  
 1. 对JDBC的封装工具类  
 >核心类：`DbUtils类、QueryRunner类、ResultSetHandler类`[跳转导航](#user-content-导航)
+2. QueryRunner类  
+*
