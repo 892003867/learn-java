@@ -4,6 +4,7 @@
 3. _03_JDBC：[防止sql注入](#user-content-_03_jdbc)  
 4. _04_JDBC：[数据表数据存储对象](#user-content-_04_jdbc)  
 5. _05_DBUtils：[JDBC简单连接](#user-content-_05_dbutils)  
+6. _06_JavaBean：[JDBC简单连接](#user-content-_06_javabean)  
 ----
 #### Utils  
 1. JDBCUtils.java  
@@ -35,6 +36,8 @@
 ----
 #### _05_DBUtils  
 1. 对JDBC的封装工具类  
->核心类：`DbUtils类、QueryRunner类、ResultSetHandler类`[跳转导航](#user-content-导航)
+>核心类：`DbUtils类、QueryRunner类、ResultSetHandler类`  
 2. QueryRunner类  
-*通过update()方法进行增删改操作
+*通过`update()`方法进行增删改操作[跳转导航](#user-content-导航)  
+#### _06_JavaBean
+1. 
