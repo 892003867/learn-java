@@ -4,6 +4,7 @@ import org.apache.commons.dbutils.DbUtils;
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.ArrayHandler;
 import org.apache.commons.dbutils.handlers.ArrayListHandler;
+import org.apache.commons.dbutils.handlers.BeanHandler;
 import org.junit.jupiter.api.Test;
 import utils.JDBCUtils;
 
@@ -45,5 +46,13 @@ public class ResultSetHandler06 {
             System.out.println();
         }
         DbUtils.closeQuietly(con);
+    }
+
+    @Test // BeanHandler
+    public void beanHandler() throws Exception {
+        // BeanHandler,将一行数据封装成java Bean类对象
+        String sql = "select * from jdbc_01";
+        jdbc01bean jdbcbean = qr.query(con, sql, new BeanHandler<jdbc01bean>(jdbc01bean.class));
+        System.out.println(jdbcbean.getSdesc());
     }
 }

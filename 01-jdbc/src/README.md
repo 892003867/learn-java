@@ -46,4 +46,10 @@
 3. ArrayHandler类  
 *只查询数据库第一行的数据  
 4. ArrayListHandler类  
-*每一行的数据封装到List<Object[]>中,通过嵌套循环遍历
+*每一行的数据封装到List<Object[]>中,通过嵌套循环遍历  
+5. BeanHandler类  
+*将结果集的第一行封装成bean类  
+```java
+ String sql = "select * from jdbc_01";
+        jdbc01bean jdbcbean = qr.query(con, sql, new BeanHandler<jdbc01bean>(jdbc01bean.class));
+```  

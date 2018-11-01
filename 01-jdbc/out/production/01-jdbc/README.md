@@ -46,4 +46,6 @@
 3. ArrayHandler类  
 *只查询数据库第一行的数据  
 4. ArrayListHandler类  
-*每一行的数据封装到List<Object[]>中
+*每一行的数据封装到List<Object[]>中,通过嵌套循环遍历  
+5. BeanHandler类  
+*将结果集的第一行封装成bean类
