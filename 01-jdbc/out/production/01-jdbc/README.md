@@ -56,4 +56,13 @@
 6. BeanListHandler类  
 *将数据库得到的结果集封装成bean类并存储到List集合中  
 7. ColumnListHandler类  
-*结果集，指定列的数据，存储到List集合
+*结果集，指定列的数据，存储到List集合  
+```java
+  List<Object> list = qr.query(con, sql, new ColumnListHandler<Object>("sname"));
+```  
+7. ScalarHandler类  
+*只针对一条结果集处理类  
+8. MapHandler类  
+*第一行数据，以键值对存储到Map集合中，键是数据库的列名，值时数据库的数据  
+8. ScalarListHandler类  
+*

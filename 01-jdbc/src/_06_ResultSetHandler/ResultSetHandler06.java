@@ -9,6 +9,8 @@ import utils.JDBCUtils;
 import java.sql.Connection;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 public class ResultSetHandler06 {
     private static Connection con;
@@ -76,6 +78,42 @@ public class ResultSetHandler06 {
         while (it.hasNext()) {
             Object o = it.next();
             System.out.print(o + "\t");
+        }
+    }
+
+    @Test  // ScalarHandler
+    public void scalarHandler() throws Exception {
+        // ScalarHandler类，只有一个结果集
+        // sql语句count(*) 聚合函数，计算一共多少条数据
+        String sql = "select count(*) from jdbc_01";
+        // 传递sname指定获取sname的那一列数据
+        Object v = qr.query(con, sql, new ScalarHandler<Object>());
+        System.out.println(v);
+    }
+
+    @Test // MapHandler
+    public void mapHandler() throws Exception {
+        // MapHandler类,将第一行数据键值对方式存储到Map集合中
+        String sql = "select * from jdbc_01";
+        Map<String, Object> map = qr.query(con, sql, new MapHandler());
+        // 遍历Map集合
+        Set<Map.Entry<String, Object>> set = map.entrySet();
+        Iterator<Map.Entry<String, Object>> it = set.iterator();
+        while (it.hasNext()) {
+            Map.Entry<String, Object> m = it.next();
+            System.out.print(m.getKey() + "/" + m.getValue() + "\t");
+        }
+    }
+
+    @Test // MapListHandler
+    public void mapListHandler() throws Exception {
+        // MapListHandler类，将数据库查到的结果集存储到Map集合中
+        String sql = "select * from jdbc_01";
+        List<Map<String, Object>> map = qr.query(con, sql, new MapListHandler());
+        // 遍历Map集合
+        Iterator<Map<String, Object>> it = map.iterator();
+        while (it.hasNext()){
+            System.out.println(it.next());
         }
     }
 }
