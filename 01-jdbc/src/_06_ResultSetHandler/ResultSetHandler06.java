@@ -2,9 +2,7 @@ package _06_ResultSetHandler;
 
 import org.apache.commons.dbutils.DbUtils;
 import org.apache.commons.dbutils.QueryRunner;
-import org.apache.commons.dbutils.handlers.ArrayHandler;
-import org.apache.commons.dbutils.handlers.ArrayListHandler;
-import org.apache.commons.dbutils.handlers.BeanHandler;
+import org.apache.commons.dbutils.handlers.*;
 import org.junit.jupiter.api.Test;
 import utils.JDBCUtils;
 
@@ -54,5 +52,30 @@ public class ResultSetHandler06 {
         String sql = "select * from jdbc_01";
         jdbc01bean jdbcbean = qr.query(con, sql, new BeanHandler<jdbc01bean>(jdbc01bean.class));
         System.out.println(jdbcbean.getSdesc());
+    }
+
+    @Test // BeanListHandler
+    public void beanListHandler() throws Exception {
+        // BeanListHandler类，将每行数据封装bean类，并存储到List集合中
+        String sql = "select * from jdbc_01";
+        List<jdbc01bean> list = qr.query(con, sql, new BeanListHandler<jdbc01bean>(jdbc01bean.class));
+        Iterator<jdbc01bean> it = list.iterator();
+        while (it.hasNext()) {
+            jdbc01bean jdbc = it.next();
+            System.out.print(jdbc.getSdesc() + "\t");
+        }
+    }
+
+    @Test // ColumnListHandler
+    public void columnListHandler() throws Exception {
+        // ColumnListHandler类，将指定竖列封装到List集合中
+        String sql = "select * from jdbc_01";
+        // 传递sname指定获取sname的那一列数据
+        List<Object> list = qr.query(con, sql, new ColumnListHandler<Object>("sname"));
+        Iterator<Object> it = list.iterator();
+        while (it.hasNext()) {
+            Object o = it.next();
+            System.out.print(o + "\t");
+        }
     }
 }

@@ -48,4 +48,12 @@
 4. ArrayListHandler类  
 *每一行的数据封装到List<Object[]>中,通过嵌套循环遍历  
 5. BeanHandler类  
-*将结果集的第一行封装成bean类
+*将结果集的第一行封装成bean类  
+```java
+ String sql = "select * from jdbc_01";
+        jdbc01bean jdbcbean = qr.query(con, sql, new BeanHandler<jdbc01bean>(jdbc01bean.class));
+```  
+6. BeanListHandler类  
+*将数据库得到的结果集封装成bean类并存储到List集合中  
+7. ColumnListHandler类  
+*结果集，指定列的数据，存储到List集合
