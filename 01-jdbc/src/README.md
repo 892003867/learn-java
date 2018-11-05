@@ -18,6 +18,22 @@
         } catch (IOException e) {
             throw new RuntimeException("读取properties流错误");
         }
+```  
+2. DBCPUtils工具，内部实现反射技术，返回BasicDataSource实现类  
+```java
+Class c = DBCPUtils.class;
+        Method m = null;
+        try {
+            m = c.getMethod("getDataSource");
+        } catch (NoSuchMethodException e) {
+            e.printStackTrace();
+        }
+        try {
+            dbs = (BasicDataSource) m.invoke(c.newInstance());
+        } catch (Exception e) {
+            throw new RuntimeException("执行method异常");
+        }
+        return dbs;
 ```
 ----
 #### _01_JDBC  
@@ -75,4 +91,4 @@
 2. BasicDataSource类通过`getConnection()`获得连接，但在此之前需要通过`set`一系列方法进行配置连接。  
 3. 配置连接池  
 >配置连接池常用方法：`setInitialSize()、setMaxTotal()、setMinIdle()`  
-4. 使用`QueryRunner类`配合`BasicDataSource类`进行连接并查询数据库  
+4. 使用`QueryRunner类`配合`BasicDataSource类`进行连接并查询数据库[跳转导航](#user-content-导航)  
