@@ -5,6 +5,7 @@
 4. _04_JDBC：[数据表数据存储对象](#user-content-_04_jdbc)  
 5. _05_DBUtils：[DBUtils工具类](#user-content-_05_dbutils)  
 6. _06_ResultSetHandler：[ResultSetHandler结果集处理](#user-content-_06_resultsethandler)  
+7. _07_DBCP：[DBCP连接池](#user-content-_07_dbcp)  
 ----
 #### Utils  
 1. JDBCUtils.java  
@@ -39,6 +40,7 @@
 >核心类：`DbUtils类、QueryRunner类、ResultSetHandler类`  
 2. QueryRunner类  
 *通过`update()`方法进行增删改操作[跳转导航](#user-content-导航)  
+----
 #### _06_ResultSetHandler  
 1. JavaBean：对数据库表的一种类的表现，要求getter与setter，空参构造器与构造器赋值，bean用于封装数据  
 2. ResultSetHandler接口：结果集处理工具,依据实现类进行对结果处理，通过QueryRunner类的`query()`方法，得到ResultSetHandler接口  
@@ -66,3 +68,11 @@
 *第一行数据，以键值对存储到Map集合中，键是数据库的列名，值时数据库的数据  
 8. ScalarListHandler类  
 *将数据库查询到的结果集存储到List<Map<k,v>>集合当中[跳转导航](#user-content-导航)  
+----
+#### _07_DBCP  
+1. javax.sql包中的DataSource接口，常见连接池DBCP、c3p0，使用dbcp包与pool包  
+>常用实现类：`BasicDataSource类`  
+2. BasicDataSource类通过`getConnection()`获得连接，但在此之前需要通过`set`一系列方法进行配置连接。  
+3. 配置连接池  
+>配置连接池常用方法：`setInitialSize()、setMaxTotal()、setMinIdle()`  
+4. 使用`QueryRunner类`配合`BasicDataSource类`进行连接查询数据库  
