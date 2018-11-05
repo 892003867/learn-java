@@ -75,4 +75,4 @@
 2. BasicDataSource类通过`getConnection()`获得连接，但在此之前需要通过`set`一系列方法进行配置连接。  
 3. 配置连接池  
 >配置连接池常用方法：`setInitialSize()、setMaxTotal()、setMinIdle()`  
-4. 使用`QueryRunner类`配合`BasicDataSource类`进行连接查询数据库  
+4. 使用`QueryRunner类`配合`BasicDataSource类`进行连接并查询数据库  
