@@ -6,7 +6,7 @@
 5. _05_DBUtils：[DBUtils工具类](#user-content-_05_dbutils)  
 6. _06_ResultSetHandler：[ResultSetHandler结果集处理](#user-content-_06_resultsethandler)  
 7. _07_DBCP：[DBCP连接池](#user-content-_07_dbcp)  
-7. _07_DBCP：[登录注册](#user-content-_08_dbcp)  
+7. _07_DBCP：[DBCP登录注册](#user-content-_08_dbcp)  
 ----
 #### Utils  
 1. JDBCUtils.java  
