@@ -1,8 +1,8 @@
 package utils;
 
 import org.apache.commons.dbcp2.BasicDataSource;
+import org.apache.commons.dbutils.QueryRunner;
 
-import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 public class DBCPUtils {
@@ -15,6 +15,8 @@ public class DBCPUtils {
 
     private static BasicDataSource bds;
     private static BasicDataSource dbs;
+    private static QueryRunner qr;
+    private static Class c;
 
     static {
         bds = new BasicDataSource();
@@ -29,8 +31,11 @@ public class DBCPUtils {
         bds.setMinIdle(1); // 最小空闲数
     }
 
+    static {
+        c = DBCPUtils.class;
+    }
+
     public static BasicDataSource getClassReflect() {
-        Class c = DBCPUtils.class;
         Method m = null;
         try {
             m = c.getMethod("getDataSource");
@@ -45,7 +50,27 @@ public class DBCPUtils {
         return dbs;
     }
 
+    public static QueryRunner getqr() {
+        Method m = null;
+        try {
+            m = c.getMethod("getQueryRunner");
+        } catch (NoSuchMethodException e) {
+            e.printStackTrace();
+        }
+        try {
+            qr = (QueryRunner) m.invoke(c.newInstance());
+        } catch (Exception e) {
+            throw new RuntimeException("执行method异常");
+        }
+        return qr;
+    }
+
     public BasicDataSource getDataSource() {
         return bds;
+    }
+
+    public QueryRunner getQueryRunner() {
+        return new QueryRunner(bds);
+
     }
 }
