@@ -6,6 +6,7 @@
 5. _05_DBUtils：[DBUtils工具类](#user-content-_05_dbutils)  
 6. _06_ResultSetHandler：[ResultSetHandler结果集处理](#user-content-_06_resultsethandler)  
 7. _07_DBCP：[DBCP连接池](#user-content-_07_dbcp)  
+7. _07_DBCP：[登录注册](#user-content-_07_dbcp)  
 ----
 #### Utils  
 1. JDBCUtils.java  
@@ -93,5 +94,5 @@ Class c = DBCPUtils.class;
 3. 配置连接池  
 >配置连接池常用方法：`setInitialSize()、setMaxTotal()、setMinIdle()`  
 4. 使用`QueryRunner类`配合`BasicDataSource类`进行连接并查询数据库[跳转导航](#user-content-导航)  
-#### _07_DBCP  
+#### _08_DBCP  
 1.登录注册的实现，
