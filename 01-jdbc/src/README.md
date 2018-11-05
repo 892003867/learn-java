@@ -19,7 +19,8 @@
             throw new RuntimeException("读取properties流错误");
         }
 ```  
-2. DBCPUtils工具，内部实现反射技术，返回BasicDataSource实现类  
+2. DBCPUtils.java  
+* 内部实现反射技术，返回BasicDataSource实现类  
 ```java
 Class c = DBCPUtils.class;
         Method m = null;
