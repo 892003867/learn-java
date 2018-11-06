@@ -6,6 +6,7 @@
 5. _05_DBUtils：[DBUtils工具类](#user-content-_05_dbutils)  
 6. _06_ResultSetHandler：[ResultSetHandler结果集处理](#user-content-_06_resultsethandler)  
 7. _07_DBCP：[DBCP连接池](#user-content-_07_dbcp)  
+7. _07_DBCP：[DBCP登录注册](#user-content-_08_dbcp)  
 ----
 #### Utils  
 1. JDBCUtils.java  
@@ -19,7 +20,23 @@
             throw new RuntimeException("读取properties流错误");
         }
 ```  
-2. 
+2. DBCPUtils.java  
+*内部实现反射技术，返回BasicDataSource实现类  
+```java
+Class c = DBCPUtils.class;
+        Method m = null;
+        try {
+            m = c.getMethod("getDataSource");
+        } catch (NoSuchMethodException e) {
+            e.printStackTrace();
+        }
+        try {
+            dbs = (BasicDataSource) m.invoke(c.newInstance());
+        } catch (Exception e) {
+            throw new RuntimeException("执行method异常");
+        }
+        return dbs;
+```
 ----
 #### _01_JDBC  
 1. 进行简单步骤连接[跳转导航](#user-content-导航)
@@ -77,3 +94,5 @@
 3. 配置连接池  
 >配置连接池常用方法：`setInitialSize()、setMaxTotal()、setMinIdle()`  
 4. 使用`QueryRunner类`配合`BasicDataSource类`进行连接并查询数据库[跳转导航](#user-content-导航)  
+#### _08_DBCP  
+1.登录注册的实[跳转导航](#user-content-导航)  
