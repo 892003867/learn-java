@@ -95,4 +95,4 @@ Class c = DBCPUtils.class;
 >配置连接池常用方法：`setInitialSize()、setMaxTotal()、setMinIdle()`  
 4. 使用`QueryRunner类`配合`BasicDataSource类`进行连接并查询数据库[跳转导航](#user-content-导航)  
 #### _08_DBCP  
-1.登录注册的实现[跳转导航](#user-content-导航)  
+1.登录注册的实[跳转导航](#user-content-导航)  
