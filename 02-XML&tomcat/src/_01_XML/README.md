@@ -33,8 +33,13 @@
     targetNamespace="http://www.baidu.com"  
     xmlns="http://www.baidu.com"  
     elementFormDefault="qualified"  
+    element：        定义元素的开始  
+    complexType：    代表下面出现的是复杂的类型  
+    sequence：       表示下方子元素是有序的  
 ```  
 4. XSD与DTD区别  
 *DTD约束文件没有命名空间，导致无法区分，XSD有了命名空间，这样将不会文件命名元素冲突  
+5. 名称空间介绍  
+*名称空间的作用防止相同两个元素同名冲突问题  
 [跳转导航](#user-content-导航)  
 ----
