@@ -1,11 +1,11 @@
 #### 导航  
-1. _01_XML_DTD：[DTD语法](#user-content-_01_xml_dtd)  
+1. _01_XML_DTD_XSD：[DTD语法](#user-content-_01_xml_dtd_xsd)  
 ----
 #### Utils  
 1. J   
 *p  
 ----
-#### _01_XML_DTD  
+#### _01_XML_DTD_XSD  
 1. DTD约束  
 >定义规则
 `
@@ -33,5 +33,7 @@
     xmlns="http://www.baidu.com"
     elementFormDefault="qualified"  
 `  
+4. XSD与DTD区别  
+*DTD约束文件没有命名空间，导致无法区分，XSD有了命名空间，这样将不会文件命名元素冲突  
 [跳转导航](#user-content-导航)  
 ----
