@@ -22,8 +22,8 @@
 `
      xmlns：                               空间命名，url可以自定义，也可以使用约束url
      xmlns:xsi：                           使用xs做为前缀
-     xsi:schemaLocation：                  导入本地约束文件，约束当前xml使用的标签
-     <!DOCTYPE web-app SYSTEM "test.dtd">：导入本地约束文件
+     xsi:schemaLocation：                  导入本地约束文件，XSD约束
+     <!DOCTYPE web-app SYSTEM "test.dtd">：导入本地约束文件，DTD约束
      <![cdata[ 转成字符形式 ]]>：            不会被浏览器解析
 `[跳转导航](#user-content-导航)  
 ----
