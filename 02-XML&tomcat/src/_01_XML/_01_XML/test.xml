@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!--
+     xmlns：                               空间命名，url可以自定义，也可以使用约束url
+     xmlns:xsi：                           使用xs做为前缀
+     xsi:schemaLocation：                  导入本地约束文件，约束当前xml使用的标签
+     <!DOCTYPE web-app SYSTEM "test.dtd">：导入本地约束文件
+     <![cdata[ 转成字符形式 ]]>：            不会被浏览器解析
+-->
+
+<web-app xmlns="http://www.baidu.com"
+         xmlns:xsi="http://www.baidu.com"
+         xsi:schemaLocation="test.dtd">
+    <servlet>
+        <servlet-name></servlet-name>
+        <description></description>
+        <servlet-class></servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>qewe</servlet-name>
+        <url-pattern></url-pattern>
+    </servlet-mapping>
+    <welcome-file-list>
+        <welcome-file></welcome-file>
+    </welcome-file-list>
+
+    <![CDATA[
+        if(int i=0;i<5;i++){
+            System.out.println(i);
+        }
+    ]]>
+</web-app>

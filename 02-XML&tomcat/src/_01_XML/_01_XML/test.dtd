@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+        <!--
+         模拟servlet2.3规范，如果开发人员需要在xml使用当前DTD约束，必须包括DOCTYPE。
+            格式如下：
+            <!DOCTYPE web-app SYSTEM "web-app_2_3.dtd">
+        -->
+        <!--
+            *：          出现多次
+            ?：          0次或者1次
+            +：          最少出现1次或者多次
+            |：          选择两者之一
+            ()：         用来给元素分组
+            ,：          表示按照顺序出现
+             (#PCDATA)： 该内容模型说明元素中可以同时出现文本和元素.
+        -->
+        <!ELEMENT web-app (servlet*,servlet-mapping* , welcome-file-list?) >
+        <!ELEMENT servlet (servlet-name,description?,(servlet-class|jsp-file))>
+        <!ELEMENT servlet-mapping (servlet-name,url-pattern+) >
+        <!ELEMENT servlet-name (#PCDATA)>
+        <!ELEMENT servlet-class (#PCDATA)>
+        <!ELEMENT url-pattern (#PCDATA)>
+        <!ELEMENT description (#PCDATA)>
+        <!ELEMENT jsp-file (#PCDATA)>
+        <!ELEMENT welcome-file-list (welcome-file+)>
+        <!ELEMENT welcome-file (#PCDATA)>
+        <!ATTLIST web-app version CDATA #IMPLIED>
