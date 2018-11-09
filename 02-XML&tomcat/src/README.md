@@ -59,6 +59,7 @@ Host：(主机端口)
 Content-length：(文件的长度)  
 Connection：keep-alive (保持连接)  
 Cache-Control：no-cache (是否缓存)  
+If-Modified-Since：(客户端记录的上一次修改时间)  
 ```  
 2. http协议response响应头  
 ```  
@@ -67,8 +68,8 @@ Server：Apache-Coyoye/1.1 (服务器版本)
 Accpet-Ranges：bytes (可接收的数据范围为字节)  
 ETag：W/"305-1470186605044" ()  
 Last-Modified：web,03 aug 2016 (最后的修改时间)  
-Content-Type：text/html ()  
-Content-Length：305 ()  
-Date：web 03 aug 2016 ()  
+Content-Type：text/html (响应体的页面显示的正文为text/html)  
+Content-Length：305 (响应体的内容长度)  
+Date：web 03 aug 2016 (最终响应时间)  
 ```  
-[跳转导航](#user-content-导航)  
+*Last-modified：response响应头记录了访问资源最后的修改时间，而客户端的request请求头记录了上一次的修改时间。于是服务器端的修改时间与客户端记录的修改时间进行对比，如果服务器端的数据发生了修改，那么对比出来的时间不相等，就会重新发送新的数据，触发200状态码。如果服务器端数据没有修改，修改时间相等，那么浏览器默认直接从本地缓存读取数据，触发304[跳转导航](#user-content-导航)  
