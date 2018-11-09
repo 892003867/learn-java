@@ -1,11 +1,12 @@
 #### 导航  
-1. _01_XML_DTD_XSD：[DTD语法](#user-content-_01_xml_dtd_xsd)  
+1. _01_XML_DTD_XSD：[XML](#user-content-_01_xml)  
+1. _02_tomcat：[HTTP协议](#user-content-_02_tomcat)  
 ----
 #### Utils  
-1. J   
-*p  
+1.    
+*  
 ----
-#### _01_XML_DTD_XSD  
+#### _01_XML  
 1. DTD约束  
 >定义规则
 ```
@@ -43,6 +44,31 @@
 *名称空间的作用防止相同两个元素同名冲突问题  
 9. XML解析方式  
 *常用解析方式DOM解析，树状方式解析，将文档加载内存中，形成Document对象  
-*通过`domj4`对XML文件进行解析  
+*通过`domj4`对XML文件进行解析[跳转导航](#user-content-导航)  
+----  
+#### _02_tomcat  
+1. http协议request请求头  
+```  
+Accpet：text/html,application/xhtml+xml (可以接受的数据类型)  
+Referer：(数据来源的域名地址)  
+Accpet-language：(接收的语言)  
+User-Agent：(可以查看客户端系统相关信息)  
+Content-Type：application/x-www-form-urlencoded (文本的类型)  
+Accpet-Encoding：gzip，deflate (接收的压缩格式)  
+Host：(主机端口)  
+Content-length：(文件的长度)  
+Connection：keep-alive (保持连接)  
+Cache-Control：no-cache (是否缓存)  
+```  
+2. http协议response响应头  
+```  
+HTTP：1.1 200 ok (响应头，协议版本，状态码)  
+Server：Apache-Coyoye/1.1 (服务器版本)  
+Accpet-Ranges：bytes (可接收的数据范围为字节)  
+ETag：W/"305-1470186605044" ()  
+Last-Modified：web,03 aug 2016 (最后的修改时间)  
+Content-Type：text/html ()  
+Content-Length：305 ()  
+Date：web 03 aug 2016 ()  
+```  
 [跳转导航](#user-content-导航)  
-----
