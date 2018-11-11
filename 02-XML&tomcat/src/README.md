@@ -83,4 +83,12 @@ temp：临时文件目录
 webapps：项目的运行环境空间(ROOT默认的目录，可以放index.html等)  
 work：工作目录  
 ```  
+*启动的执行脚本，在bin目录下，start.bat，而start.bin是linux系统启动文件  
+4. web应用的目录结构  
+```  
+WEB-INF：受保护的目录，无法静态资源访问此目录内部文件  
+    >classes：此目录存放源文件，java类  
+    >lib：此目录存放jar包  
+    >web.xml：web的配置文件  
+```  
 [跳转导航](#user-content-导航)  
