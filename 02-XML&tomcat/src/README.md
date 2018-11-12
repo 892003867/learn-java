@@ -95,6 +95,6 @@ WEB-INF：受保护的目录，无法静态资源访问此目录内部文件
 5. servlet快速入门  
 * 实现`Servlet`接口，实现接口方法[跳转导航](#user-content-导航)  
 #### _03_tomcat  
->##### 01快速入门  
-1.  
+>##### 01_生命周期  
+1. (Servlet创建时候)init -> (每次请求)service -> 关闭服务器(destroy)  
 [跳转导航](#user-content-导航)  
