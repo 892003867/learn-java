@@ -1,5 +1,3 @@
-package _01;
-
 import javax.servlet.*;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
@@ -17,7 +15,7 @@ public class quick implements Servlet {
         ServletContext context = servletConfig.getServletContext();
         System.out.println(context); // 获得Context对象
 
-        
+
         System.out.println("init running");
     }
 

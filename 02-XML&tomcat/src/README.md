@@ -2,6 +2,7 @@
 1. _01_XML_DTD_XSD：[XML](#user-content-_01_xml)  
 2. _02_tomcat：[HTTP协议](#user-content-_02_tomcat)  
 3. _03_tomcat：[tomcat](#user-content-_03_tomcat)  
+4. _04_tomcat：[tomcat](#user-content-_04_tomcat)  
 ----
 #### Utils  
 1.    
@@ -94,11 +95,17 @@ WEB-INF：受保护的目录，无法静态资源访问此目录内部文件
 ```  
 5. servlet快速入门  
 * 实现`Servlet`接口，实现接口方法[跳转导航](#user-content-导航)  
-#### _03_tomcat  
->##### 01_生命周期  
-1. (Servlet创建时候)init -> (每次请求)service -> 关闭服务器(destroy)  
-*init：默认第一次访问servlet时候创建该对象  
-*service：每次client发起请求都将执行一次service方法  
-*destroy：tomcat创建的对象，因此对象引用拿取不到，只能服务器关闭的时候，才会destroy销毁该对象  
+#### _03_tomcat   
+1. 生命周期  
+*(Servlet创建时候)init -> (每次请求)service -> 关闭服务器(destroy)  
+2. init  
+*默认第一次访问servlet时候创建该对象  
 *init(Config config)：config参数代表的是servlet对象的配置信息  
+3. service  
+*每次client发起请求都将执行一次service方法  
+4. destroy  
+*tomcat创建的对象，因此对象引用拿取不到，只能服务器关闭的时候，才会destroy销毁该对象  
+[跳转导航](#user-content-导航)  
+#### _04_tomcat  
+1.  
 [跳转导航](#user-content-导航)  

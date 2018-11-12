@@ -6,7 +6,7 @@
 
     <servlet> <!-- 配置name名，和class的文件位置 -->
         <servlet-name>quick</servlet-name>
-        <servlet-class>_01.quick</servlet-class>
+        <servlet-class>quick</servlet-class>
         <init-param>
             <param-name>url</param-name>
             <param-value>dbdc:mysql://</param-value>
