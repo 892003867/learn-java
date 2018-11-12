@@ -1,7 +1,7 @@
 #### 导航  
 1. _01_XML_DTD_XSD：[XML](#user-content-_01_xml)  
 2. _02_tomcat：[HTTP协议](#user-content-_02_tomcat)  
-3. _03_tomcat：[HTTP协议](#user-content-_03_tomcat)  
+3. _03_tomcat：[tomcat](#user-content-_03_tomcat)  
 ----
 #### Utils  
 1.    
@@ -95,5 +95,6 @@ WEB-INF：受保护的目录，无法静态资源访问此目录内部文件
 5. servlet快速入门  
 * 实现`Servlet`接口，实现接口方法[跳转导航](#user-content-导航)  
 #### _03_tomcat  
-##### 01啊
+>##### 01快速入门  
+1.  
 [跳转导航](#user-content-导航)  
