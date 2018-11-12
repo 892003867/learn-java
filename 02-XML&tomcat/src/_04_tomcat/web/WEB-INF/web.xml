@@ -3,4 +3,51 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
+
+
+    <servlet>
+        <servlet-name>servlet</servlet-name>
+        <servlet-class>servlet</servlet-class>
+        <init-param> <!--init初始化配置-->
+            <param-name>url</param-name>
+            <param-value>jdbc:mysql://192.168.56.1:8888/jdbc_01</param-value>
+        </init-param>
+        <!--
+            服务器启动将默认创建servlet配置
+            <load-on-startup> 表示servlet启动时就创建
+                数字表示优先级，数字越小优先级越高，推荐3
+        -->
+        <load-on-startup>3</load-on-startup> <!--服务器启动时就创建-->
+    </servlet>
+    <!--
+        重点url-pattern的三种配置区别
+            完全匹配：路径完全相同才能访问
+            目录匹配：星号*表示匹配任意字符
+            扩展名匹配：星号*匹配任何字符，重点扩展名匹配
+            注意：第二种与第三种匹配不能混用例如：/aa/bb/cc.jpg，这将报错
+    -->
+    <servlet-mapping>
+        <servlet-name>servlet</servlet-name>
+        <url-pattern>/servlet</url-pattern> <!--完全匹配-->
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>servlet</servlet-name>
+        <url-pattern>/servlet/*</url-pattern> <!--目录匹配-->
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>servlet</servlet-name>
+        <url-pattern>/*.jpg</url-pattern> <!--扩展名匹配-->
+    </servlet-mapping>
+
+    <!--
+        缺省Servlet
+            当以上所有，都无法匹配的时候，将最终被缺省配置匹配
+            tomcat的server.xml配置，表示全局配置
+                缺省配置将覆盖全局的配置，那么将导致静态请求转向到缺省的配置路由，不再匹配全局的缺省default配置
+    -->
+    <servlet-mapping>
+        <servlet-name>servlet</servlet-name>
+        <url-pattern>/</url-pattern> <!--缺省Servlet-->
+    </servlet-mapping>
 </web-app>

@@ -30,5 +30,6 @@
         <jarDirectory url="file://D:/plugin/tomcat/lib" recursive="false" />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="_04_tomcat" level="project" />
   </component>
 </module>
