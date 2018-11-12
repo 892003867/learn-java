@@ -154,5 +154,14 @@ WEB-INF：受保护的目录，无法静态资源访问此目录内部文件
          <servlet-name>servlet</servlet-name>  
          <url-pattern>/</url-pattern> <!--缺省Servlet-->  
      </servlet-mapping>  
+     
+     <!--  
+          欢迎页面  
+            配置默认的访问页面，从上往下找  
+     -->  
+     <welcome-file-list>  
+        <welcome-file>index.html</welcome-file>  
+        <welcome-file>index.jsp</welcome-file>  
+     </welcome-file-list>  
 ```  
 [跳转导航](#user-content-导航)  
