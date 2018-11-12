@@ -97,4 +97,8 @@ WEB-INF：受保护的目录，无法静态资源访问此目录内部文件
 #### _03_tomcat  
 >##### 01_生命周期  
 1. (Servlet创建时候)init -> (每次请求)service -> 关闭服务器(destroy)  
+*init：默认第一次访问servlet时候创建该对象  
+*service：每次client发起请求都将执行一次service方法  
+*destroy：tomcat创建的对象，因此对象引用拿取不到，只能服务器关闭的时候，才会destroy销毁该对象  
+
 [跳转导航](#user-content-导航)  
