@@ -1,8 +1,8 @@
 #### 导航  
 1. _01_XML_DTD_XSD：[XML](#user-content-_01_xml)  
 2. _02_tomcat：[HTTP协议](#user-content-_02_tomcat)  
-3. _03_tomcat：[tomcat](#user-content-_03_tomcat)  
-4. _04_tomcat：[tomcat](#user-content-_04_tomcat)  
+3. _03_tomcat：[servlet生命周期](#user-content-_03_tomcat)  
+4. _04_tomcat：[servlet配置](#user-content-_04_tomcat)  
 ----
 #### Utils  
 1.    
