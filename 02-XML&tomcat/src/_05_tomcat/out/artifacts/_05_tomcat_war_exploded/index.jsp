@@ -7,10 +7,14 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-  <head>
+<head>
     <title>$Title$</title>
-  </head>
-  <body>
-  $END$
-  </body>
+</head>
+<body>
+<form action="/login" method="post">
+    <input type="text" name="username" placeholder="输入用户名">
+    <input type="password" name="password" placeholder="输入密码">
+    <input type="submit" value="提交">
+</form>
+</body>
 </html>
