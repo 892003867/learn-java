@@ -3,6 +3,7 @@
 2. _02_tomcat：[HTTP协议](#user-content-_02_tomcat)  
 3. _03_tomcat：[servlet生命周期](#user-content-_03_tomcat)  
 4. _04_tomcat：[servlet配置](#user-content-_04_tomcat)  
+4. _05_tomcat：[httpServlet](#user-content-_05_tomcat)  
 ----
 #### Utils  
 1.    
@@ -95,6 +96,7 @@ WEB-INF：受保护的目录，无法静态资源访问此目录内部文件
 ```  
 5. servlet快速入门  
 * 实现`Servlet`接口，实现接口方法[跳转导航](#user-content-导航)  
+----  
 #### _03_tomcat   
 1. 生命周期  
 *(Servlet创建时候)init -> (每次请求)service -> 关闭服务器(destroy)  
@@ -106,6 +108,7 @@ WEB-INF：受保护的目录，无法静态资源访问此目录内部文件
 4. destroy  
 *tomcat创建的对象，因此对象引用拿取不到，只能服务器关闭的时候，才会destroy销毁该对象  
 [跳转导航](#user-content-导航)  
+----  
 #### _04_tomcat  
 1. web.xml配置  
 ```
@@ -165,3 +168,8 @@ WEB-INF：受保护的目录，无法静态资源访问此目录内部文件
      </welcome-file-list>  
 ```  
 [跳转导航](#user-content-导航)  
+
+----  
+#### _05_tomcat  
+1. HttpServlet的doGet与doPost方法  
+*先找`service()`方法，没有就找`HttpServlet类`里的`service()`方法，存在就执行，内部又调用了`service`的重载方法，重载方法里通过`getMethod()`方法判断是post还是get请求，再进行`doGet()`或者`doPost()`方法调用，最终调用子类重写方法[跳转导航](#user-content-导航)  
